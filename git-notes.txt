@@ -1,0 +1,65 @@
+git diff
+ differenced between workspace and the STAGED files
+ 
+if you staged the file README.md and then added a second line it shows:
+$ git diff
+diff --git a/README.md b/README.md
+index ca14658..1aad2bb 100644
+--- a/README.md
++++ b/README.md
+@@ -4,3 +4,4 @@ playground
+ Git playground
+
+ added this line
++add the other line
+
+
+To see changed between the staging aread and the commit xxx
+git --staged xxx
+$ git diff --staged   11016492
+diff --git a/README.md b/README.md
+index 164adbf..ca14658 100644
+--- a/README.md
++++ b/README.md
+@@ -2,3 +2,5 @@ playground
+ ==========
+
+ Git playground
++
++added this line
+diff --git a/a1.txt b/a1.txt
+new file mode 100644
+index 0000000..8c6be7b
+--- /dev/null
++++ b/a1.txt
+@@ -0,0 +1 @@
++The new file a1.txt
+\ No newline at end of file
+
+
+To see changes (staged and unstaged) between the workspace and the commit xxx
+git diff xxx
+$ git diff 11016492
+diff --git a/README.md b/README.md
+index 164adbf..1aad2bb 100644
+--- a/README.md
++++ b/README.md
+@@ -2,3 +2,6 @@ playground
+ ==========
+
+ Git playground
++
++added this line
++add the other line
+diff --git a/a1.txt b/a1.txt
+new file mode 100644
+index 0000000..8c6be7b
+--- /dev/null
++++ b/a1.txt
+@@ -0,0 +1 @@
++The new file a1.txt
+\ No newline at end of file
+
+
+
+ 
